@@ -1,0 +1,73 @@
+{
+  "finalItemId": "final_relic",
+  "items": [
+    { "id": "wood", "name": "Lemn", "description": "Bucată de lemn", "icon": "🪵", "base": true },
+    { "id": "stone", "name": "Piatră", "description": "Bucată de piatră", "icon": "🪨", "base": true },
+    { "id": "fiber", "name": "Fibră", "description": "Fibră vegetală", "icon": "🧵", "base": true },
+
+    { "id": "stick", "name": "Băț", "description": "Un băț simplu", "icon": "🥢" },
+    { "id": "axe", "name": "Topor", "description": "Unealtă pentru tăiat", "icon": "🪓" },
+    { "id": "rope", "name": "Funie", "description": "Funie rezistentă", "icon": "🪢" },
+    { "id": "campfire", "name": "Foc de tabără", "description": "Te încălzește", "icon": "🔥" },
+    { "id": "final_relic", "name": "Căsuță", "description": "Obiectul victoriei", "icon": "🏠" }
+  ],
+  "recipes": [
+    {
+      "id": "stick-from-wood",
+      "name": "Băț",
+      "description": "Două lemne aliniate orizontal",
+      "resultItemId": "stick",
+      "pattern": [
+        { "row": 1, "col": 0, "itemId": "wood" },
+        { "row": 1, "col": 1, "itemId": "wood" }
+      ]
+    },
+    {
+      "id": "rope-from-fiber",
+      "name": "Funie",
+      "description": "Trei fibre pe verticală",
+      "resultItemId": "rope",
+      "pattern": [
+        { "row": 0, "col": 2, "itemId": "fiber" },
+        { "row": 1, "col": 2, "itemId": "fiber" },
+        { "row": 2, "col": 2, "itemId": "fiber" }
+      ]
+    },
+    {
+      "id": "axe-from-stick-stone",
+      "name": "Topor",
+      "description": "Piatră și băț în L",
+      "resultItemId": "axe",
+      "pattern": [
+        { "row": 0, "col": 0, "itemId": "stone" },
+        { "row": 0, "col": 1, "itemId": "stone" },
+        { "row": 1, "col": 0, "itemId": "stick" }
+      ]
+    },
+    {
+      "id": "campfire-from-wood-stone",
+      "name": "Foc de tabără",
+      "description": "Un pătrat de lemn cu piatră în centru",
+      "resultItemId": "campfire",
+      "pattern": [
+        { "row": 0, "col": 0, "itemId": "wood" },
+        { "row": 0, "col": 2, "itemId": "wood" },
+        { "row": 2, "col": 0, "itemId": "wood" },
+        { "row": 2, "col": 2, "itemId": "wood" },
+        { "row": 1, "col": 1, "itemId": "stone" }
+      ]
+    },
+    {
+      "id": "final-from-axe-rope-campfire",
+      "name": "Căsuță",
+      "description": "Combinație finală pentru victorie",
+      "resultItemId": "final_relic",
+      "pattern": [
+        { "row": 0, "col": 0, "itemId": "axe" },
+        { "row": 1, "col": 1, "itemId": "rope" },
+        { "row": 2, "col": 2, "itemId": "campfire" }
+      ]
+    }
+  ]
+}
+
